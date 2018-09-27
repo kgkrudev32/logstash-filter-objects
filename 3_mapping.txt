@@ -1,0 +1,177 @@
+PUT 3
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "my_custom_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "mynGram"
+                    ]
+                }
+            },
+            "filter": {
+                "mynGram": {
+                    "type": "edgeNGram",
+                    "min_gram": 2,
+                    "max_gram": 15
+                }
+            }
+        }
+    },
+    "mappings": {
+        "doc": {
+            "properties": {
+                "id": {
+                    "type": "long"
+                },
+                "delete": {
+                    "type": "boolean"
+                },
+                "created": {
+                    "type": "date"
+                },
+                "object_type_id": {
+                    "type": "long"
+                },
+                "owner": {
+                    "type": "long"
+                },
+                "parent": {
+                    "type": "long"
+                },
+                "f_10": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_102": {
+                    "properties": {
+                        "f_113": {
+                            "properties": {
+                                "f_115": {
+                                    "type": "text",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_117": {
+                                    "type": "long"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_116": {
+                            "type": "long"
+                        }
+                    },
+                    "type": "nested"
+                },
+                "f_107": {
+                    "type": "long"
+                },
+                "f_108": {
+                    "type": "long"
+                },
+                "f_109": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_112": {
+                    "properties": {
+                        "f_101": {
+                            "type": "long"
+                        },
+                        "f_120": {
+                            "type": "long"
+                        },
+                        "f_99": {
+                            "type": "long"
+                        }
+                    },
+                    "type": "nested"
+                },
+                "f_119": {
+                    "type": "long"
+                },
+                "f_145": {
+                    "type": "long"
+                },
+                "f_146": {
+                    "type": "long"
+                },
+                "f_147": {
+                    "type": "long"
+                },
+                "f_159": {
+                    "properties": {
+                        "f_142": {
+                            "type": "long"
+                        },
+                        "f_143": {
+                            "type": "long"
+                        },
+                        "f_145": {
+                            "type": "long"
+                        },
+                        "f_157": {
+                            "type": "long"
+                        },
+                        "f_85": {
+                            "type": "date"
+                        }
+                    },
+                    "type": "nested"
+                },
+                "f_8": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_85": {
+                    "type": "date"
+                },
+                "f_91": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_92": {
+                    "type": "long"
+                },
+                "f_93": {
+                    "type": "long"
+                },
+                "f_94": {
+                    "type": "long"
+                },
+                "f_95": {
+                    "type": "boolean"
+                },
+                "f_96": {
+                    "type": "boolean"
+                },
+                "f_97": {
+                    "type": "long"
+                }
+            }
+        }
+    }
+}

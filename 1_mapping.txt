@@ -1,0 +1,103 @@
+PUT 1
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "my_custom_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",
+                        "mynGram"
+                    ]
+                }
+            },
+            "filter": {
+                "mynGram": {
+                    "type": "edgeNGram",
+                    "min_gram": 2,
+                    "max_gram": 15
+                }
+            }
+        }
+    },
+    "mappings": {
+        "doc": {
+            "properties": {
+                "id": {
+                    "type": "long"
+                },
+                "delete": {
+                    "type": "boolean"
+                },
+                "created": {
+                    "type": "date"
+                },
+                "object_type_id": {
+                    "type": "long"
+                },
+                "owner": {
+                    "type": "long"
+                },
+                "parent": {
+                    "type": "long"
+                },
+                "f_1": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_2": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_3": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_5": {
+                    "type": "date"
+                },
+                "f_6": {
+                    "type": "long"
+                },
+                "f_62": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_66": {
+                    "type": "boolean"
+                },
+                "f_7": {
+                    "type": "long"
+                },
+                "f_9": {
+                    "type": "text",
+                    "fields": {
+                        "raw": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "f_90": {
+                    "type": "long"
+                }
+            }
+        }
+    }
+}
