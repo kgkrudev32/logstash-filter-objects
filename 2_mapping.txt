@@ -42,278 +42,300 @@ PUT 2
                 "parent": {
                     "type": "long"
                 },
-                "f_127": {
+                "fields": {
+                    "type": "object",
                     "properties": {
-                        "f_35": {
-                            "type": "long"
-                        },
-                        "f_60": {
-                            "type": "long"
-                        },
-                        "f_67": {
-                            "type": "boolean"
-                        },
-                        "f_68": {
-                            "type": "date"
-                        },
-                        "f_83": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
+                        "f_127": {
+                            "properties": {
+                                "f_35": {
+                                    "type": "long"
+                                },
+                                "f_60": {
+                                    "type": "long"
+                                },
+                                "f_67": {
+                                    "type": "boolean"
+                                },
+                                "f_68": {
+                                    "type": "date"
+                                },
+                                "f_83": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
                                 }
-                            }
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_131": {
-                    "properties": {
-                        "f_130": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
+                            },
+                            "type": "nested"
+                        },
+                        "f_131": {
+                            "properties": {
+                                "f_130": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_16": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
                                 }
-                            }
+                            },
+                            "type": "nested"
                         },
-                        "f_16": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
+                        "f_132": {
+                            "properties": {
+                                "f_24": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_63": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_64": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_88": {
+                                    "type": "date"
+                                },
+                                "f_89": {
+                                    "type": "date"
                                 }
-                            }
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_132": {
-                    "properties": {
-                        "f_24": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_63": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_64": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_88": {
-                            "type": "date"
-                        },
-                        "f_89": {
-                            "type": "date"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_145": {
-                    "type": "long"
-                },
-                "f_159": {
-                    "properties": {
-                        "f_142": {
-                            "type": "long"
-                        },
-                        "f_143": {
-                            "type": "long"
+                            },
+                            "type": "nested"
                         },
                         "f_145": {
                             "type": "long"
                         },
-                        "f_157": {
+                        "f_159": {
+                            "properties": {
+                                "f_142": {
+                                    "type": "long"
+                                },
+                                "f_143": {
+                                    "type": "long"
+                                },
+                                "f_145": {
+                                    "type": "long"
+                                },
+                                "f_157": {
+                                    "type": "long"
+                                },
+                                "f_85": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_31": {
+                            "properties": {
+                                "f_23": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_24": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_29": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_35": {
+                                    "type": "long"
+                                },
+                                "f_67": {
+                                    "type": "boolean"
+                                },
+                                "f_68": {
+                                    "type": "long"
+                                },
+                                "f_83": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_88": {
+                                    "type": "date"
+                                },
+                                "f_89": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_35": {
                             "type": "long"
+                        },
+                        "f_55": {
+                            "properties": {
+                                "f_23": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_24": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_29": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_35": {
+                                    "type": "long"
+                                },
+                                "f_67": {
+                                    "type": "boolean"
+                                },
+                                "f_68": {
+                                    "type": "long"
+                                },
+                                "f_83": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_88": {
+                                    "type": "date"
+                                },
+                                "f_89": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_56": {
+                            "properties": {
+                                "f_11": {
+                                    "type": "long"
+                                },
+                                "f_35": {
+                                    "type": "long"
+                                },
+                                "f_67": {
+                                    "type": "boolean"
+                                },
+                                "f_68": {
+                                    "type": "long"
+                                },
+                                "f_83": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                },
+                                "f_86": {
+                                    "type": "long"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_57": {
+                            "properties": {
+                                "f_35": {
+                                    "type": "long"
+                                },
+                                "f_54": {
+                                    "type": "long"
+                                },
+                                "f_67": {
+                                    "type": "boolean"
+                                },
+                                "f_68": {
+                                    "type": "long"
+                                },
+                                "f_83": {
+                                    "type": "text",
+                                    "analyzer": "my_custom_analyzer",
+                                    "fields": {
+                                        "raw": {
+                                            "type": "keyword"
+                                        }
+                                    }
+                                }
+                            },
+                            "type": "nested"
                         },
                         "f_85": {
                             "type": "date"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_31": {
-                    "properties": {
-                        "f_23": {
+                        },
+                        "f_91": {
                             "type": "text",
+                            "analyzer": "my_custom_analyzer",
                             "fields": {
                                 "raw": {
                                     "type": "keyword"
                                 }
                             }
-                        },
-                        "f_24": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_29": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_35": {
-                            "type": "long"
-                        },
-                        "f_67": {
-                            "type": "boolean"
-                        },
-                        "f_68": {
-                            "type": "long"
-                        },
-                        "f_83": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_88": {
-                            "type": "date"
-                        },
-                        "f_89": {
-                            "type": "date"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_35": {
-                    "type": "long"
-                },
-                "f_55": {
-                    "properties": {
-                        "f_23": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_24": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_29": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_35": {
-                            "type": "long"
-                        },
-                        "f_67": {
-                            "type": "boolean"
-                        },
-                        "f_68": {
-                            "type": "long"
-                        },
-                        "f_83": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_88": {
-                            "type": "date"
-                        },
-                        "f_89": {
-                            "type": "date"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_56": {
-                    "properties": {
-                        "f_11": {
-                            "type": "long"
-                        },
-                        "f_35": {
-                            "type": "long"
-                        },
-                        "f_67": {
-                            "type": "boolean"
-                        },
-                        "f_68": {
-                            "type": "long"
-                        },
-                        "f_83": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        },
-                        "f_86": {
-                            "type": "long"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_57": {
-                    "properties": {
-                        "f_35": {
-                            "type": "long"
-                        },
-                        "f_54": {
-                            "type": "long"
-                        },
-                        "f_67": {
-                            "type": "boolean"
-                        },
-                        "f_68": {
-                            "type": "long"
-                        },
-                        "f_83": {
-                            "type": "text",
-                            "fields": {
-                                "raw": {
-                                    "type": "keyword"
-                                }
-                            }
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_85": {
-                    "type": "date"
-                },
-                "f_91": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
                         }
                     }
                 }

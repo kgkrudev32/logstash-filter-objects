@@ -42,60 +42,69 @@ PUT 1
                 "parent": {
                     "type": "long"
                 },
-                "f_1": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "f_1": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
                         }
-                    }
-                },
-                "f_2": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                    },
+                    "f_2": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
                         }
-                    }
-                },
-                "f_3": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                    },
+                    "f_3": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
                         }
-                    }
-                },
-                "f_5": {
-                    "type": "date"
-                },
-                "f_6": {
-                    "type": "long"
-                },
-                "f_62": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                    },
+                    "f_5": {
+                        "type": "date"
+                    },
+                    "f_6": {
+                        "type": "long"
+                    },
+                    "f_62": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
                         }
-                    }
-                },
-                "f_66": {
-                    "type": "boolean"
-                },
-                "f_7": {
-                    "type": "long"
-                },
-                "f_9": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                    },
+                    "f_66": {
+                        "type": "boolean"
+                    },
+                    "f_7": {
+                        "type": "long"
+                    },
+                    "f_9": {
+                        "type": "text",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
                         }
+                    },
+                    "f_90": {
+                        "type": "long"
                     }
-                },
-                "f_90": {
-                    "type": "long"
+                  }
                 }
             }
         }

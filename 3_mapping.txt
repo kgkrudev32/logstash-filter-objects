@@ -42,134 +42,144 @@ PUT 3
                 "parent": {
                     "type": "long"
                 },
-                "f_10": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
-                        }
-                    }
-                },
-                "f_102": {
+                "fields": {
+                    "type": "object",
                     "properties": {
-                        "f_113": {
+                        "f_10": {
+                            "type": "text",
+                            "analyzer": "my_custom_analyzer",
+                            "fields": {
+                                "raw": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "f_102": {
                             "properties": {
-                                "f_115": {
-                                    "type": "text",
-                                    "fields": {
-                                        "raw": {
-                                            "type": "keyword"
+                                "f_113": {
+                                    "properties": {
+                                        "f_115": {
+                                            "type": "text",
+                                            "analyzer": "my_custom_analyzer",
+                                            "fields": {
+                                                "raw": {
+                                                    "type": "keyword"
+                                                }
+                                            }
+                                        },
+                                        "f_117": {
+                                            "type": "long"
                                         }
-                                    }
+                                    },
+                                    "type": "nested"
                                 },
-                                "f_117": {
+                                "f_116": {
                                     "type": "long"
                                 }
                             },
                             "type": "nested"
                         },
-                        "f_116": {
-                            "type": "long"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_107": {
-                    "type": "long"
-                },
-                "f_108": {
-                    "type": "long"
-                },
-                "f_109": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
-                        }
-                    }
-                },
-                "f_112": {
-                    "properties": {
-                        "f_101": {
+                        "f_107": {
                             "type": "long"
                         },
-                        "f_120": {
+                        "f_108": {
                             "type": "long"
                         },
-                        "f_99": {
-                            "type": "long"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_119": {
-                    "type": "long"
-                },
-                "f_145": {
-                    "type": "long"
-                },
-                "f_146": {
-                    "type": "long"
-                },
-                "f_147": {
-                    "type": "long"
-                },
-                "f_159": {
-                    "properties": {
-                        "f_142": {
-                            "type": "long"
+                        "f_109": {
+                            "type": "text",
+                            "analyzer": "my_custom_analyzer",
+                            "fields": {
+                                "raw": {
+                                    "type": "keyword"
+                                }
+                            }
                         },
-                        "f_143": {
+                        "f_112": {
+                            "properties": {
+                                "f_101": {
+                                    "type": "long"
+                                },
+                                "f_120": {
+                                    "type": "long"
+                                },
+                                "f_99": {
+                                    "type": "long"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_119": {
                             "type": "long"
                         },
                         "f_145": {
                             "type": "long"
                         },
-                        "f_157": {
+                        "f_146": {
                             "type": "long"
+                        },
+                        "f_147": {
+                            "type": "long"
+                        },
+                        "f_159": {
+                            "properties": {
+                                "f_142": {
+                                    "type": "long"
+                                },
+                                "f_143": {
+                                    "type": "long"
+                                },
+                                "f_145": {
+                                    "type": "long"
+                                },
+                                "f_157": {
+                                    "type": "long"
+                                },
+                                "f_85": {
+                                    "type": "date"
+                                }
+                            },
+                            "type": "nested"
+                        },
+                        "f_8": {
+                            "type": "text",
+                            "analyzer": "my_custom_analyzer",
+                            "fields": {
+                                "raw": {
+                                    "type": "keyword"
+                                }
+                            }
                         },
                         "f_85": {
                             "type": "date"
-                        }
-                    },
-                    "type": "nested"
-                },
-                "f_8": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
+                        },
+                        "f_91": {
+                            "type": "text",
+                            "analyzer": "my_custom_analyzer",
+                            "fields": {
+                                "raw": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "f_92": {
+                            "type": "long"
+                        },
+                        "f_93": {
+                            "type": "long"
+                        },
+                        "f_94": {
+                            "type": "long"
+                        },
+                        "f_95": {
+                            "type": "boolean"
+                        },
+                        "f_96": {
+                            "type": "boolean"
+                        },
+                        "f_97": {
+                            "type": "long"
                         }
                     }
-                },
-                "f_85": {
-                    "type": "date"
-                },
-                "f_91": {
-                    "type": "text",
-                    "fields": {
-                        "raw": {
-                            "type": "keyword"
-                        }
-                    }
-                },
-                "f_92": {
-                    "type": "long"
-                },
-                "f_93": {
-                    "type": "long"
-                },
-                "f_94": {
-                    "type": "long"
-                },
-                "f_95": {
-                    "type": "boolean"
-                },
-                "f_96": {
-                    "type": "boolean"
-                },
-                "f_97": {
-                    "type": "long"
                 }
             }
         }
