@@ -1,0 +1,119 @@
+PUT 1
+{
+    "settings": { 
+        "analysis": {  # настройки предобработки текстовых полей перед индексацией
+            "analyzer": {  # разделяет текст на отдельные слова (токенизация)
+                "my_custom_analyzer": {
+                    "type": "custom",
+                    "tokenizer": "standard",
+                    "filter": [
+                        "lowercase",  # приводит к нижнему регистру
+                        "mynGram"  # применяет фильтр mynGram
+                    ]
+                }
+            },
+            "filter": {  # дополнительная предопработка текстовых полей перед индексацией
+                "mynGram": {
+                    "type": "edgeNGram",  # создает несколько токенов для каждого слова:
+                                          # последовательности типа "2 буквы от начала слова",
+                                          # "3 буквы от начала слова" и т.д. до 15 букв от 
+                                          # начала слова. Все эти последовательности индексируются,
+                                          # что позволяет искать по началу слова. Слово целиком
+                    "min_gram": 2,        # тоже индексируется.
+                    "max_gram": 15        
+                }
+            }
+        }
+    },
+    "mappings": { # схема данных
+        "doc": {
+            "properties": {
+                "id": {
+                    "type": "long"
+                },
+                "delete": {
+                    "type": "boolean"
+                },
+                "created": {
+                    "type": "date"
+                },
+                "object_type_id": {
+                    "type": "long"
+                },
+                "owner": {
+                    "type": "long"
+                },
+                "parent": {
+                    "type": "long"
+                },
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "f_1": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+
+                        "fields": {  # Позволяет применить к полю дополнительные типы.
+                            "raw": {  # Произвольное название. Искать по полю с новым типом
+                                      # нужно, используя это имя, например: fields.f_1.raw
+
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "f_2": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "f_3": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "f_5": {
+                        "type": "date"
+                    },
+                    "f_6": {
+                        "type": "long"
+                    },
+                    "f_62": {
+                        "type": "text",
+                        "analyzer": "my_custom_analyzer",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "f_66": {
+                        "type": "boolean"
+                    },
+                    "f_7": {
+                        "type": "long"
+                    },
+                    "f_9": {
+                        "type": "text",
+                        "fields": {
+                            "raw": {
+                                "type": "keyword"
+                            }
+                        }
+                    },
+                    "f_90": {
+                        "type": "long"
+                    }
+                  }
+                }
+            }
+        }
+    }
+}
